@@ -194,7 +194,6 @@ input:focus-visible {
   text-shadow: 0 2px 6px #000;
 }
 
-.hero-kicker,
 .brand-year,
 .countdown-heading,
 .time-label,
@@ -204,23 +203,6 @@ input:focus-visible {
   text-transform: uppercase;
 }
 
-.hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0;
-  color: rgba(245, 239, 236, 0.88);
-  font-size: clamp(0.54rem, 0.8vw, 0.68rem);
-  text-shadow: 0 0 16px rgba(255, 242, 238, 0.28);
-}
-
-.kicker-line {
-  width: clamp(19px, 3vw, 36px);
-  height: 1px;
-  background: var(--red);
-  box-shadow: 0 0 12px rgba(229, 43, 67, 0.8);
-}
-
 .brand-lockup {
   display: flex;
   flex-direction: column;
@@ -228,9 +210,16 @@ input:focus-visible {
   gap: 2px;
 }
 
+.brand-partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 20px);
+}
+
 .brand-mark {
-  width: clamp(42px, 6vh, 60px);
-  height: clamp(42px, 6vh, 60px);
+  width: clamp(38px, 3.8vw, 52px);
+  height: clamp(38px, 3.8vw, 52px);
   object-fit: contain;
   filter: drop-shadow(0 0 11px rgba(255, 72, 96, 0.82))
     drop-shadow(0 0 27px rgba(236, 42, 68, 0.42));
@@ -240,7 +229,7 @@ input:focus-visible {
   margin: 0;
   color: #f7f3f0;
   font-family: "Barlow Condensed", Impact, sans-serif;
-  font-size: clamp(5rem, 16vw, 13rem);
+  font-size: clamp(5.5rem, 17.5vw, 14rem);
   font-weight: 900;
   letter-spacing: 0.085em;
   line-height: 0.78;
@@ -440,6 +429,23 @@ input:focus-visible {
   line-height: 1.35;
 }
 
+.organizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.organizer-logo {
+  display: block;
+  width: clamp(190px, 21vw, 250px);
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.34);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -502,13 +508,8 @@ input:focus-visible {
   }
 
   .brand-lockup h1 {
-    font-size: clamp(4.2rem, 18vw, 7.5rem);
+    font-size: clamp(4.4rem, 19.5vw, 8rem);
     letter-spacing: 0.06em;
-  }
-
-  .brand-mark {
-    width: clamp(56px, 8vh, 66px);
-    height: clamp(56px, 8vh, 66px);
   }
 
   .countdown-wrap {
@@ -546,13 +547,8 @@ input:focus-visible {
     padding-bottom: 7px;
   }
 
-  .brand-mark {
-    width: 52px;
-    height: 52px;
-  }
-
   .brand-lockup h1 {
-    font-size: clamp(3.8rem, 15vw, 12rem);
+    font-size: clamp(4.2rem, 16vw, 13rem);
   }
 
   .brand-year {
@@ -581,17 +577,12 @@ input:focus-visible {
 }
 
 @media (max-height: 520px) {
-  .hero-kicker,
   .hero-subtitle {
     display: none;
   }
 
-  .brand-mark {
-    display: none;
-  }
-
   .brand-lockup h1 {
-    font-size: clamp(3.2rem, 10vh, 5.2rem);
+    font-size: clamp(3.5rem, 11vh, 5.8rem);
   }
 
   .brand-year {

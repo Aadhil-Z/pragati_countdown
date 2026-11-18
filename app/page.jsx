@@ -86,6 +86,8 @@ export default function Home() {
       }
 
       const context = new AudioContextConstructor();
+      audioContextRef.current = context;
+      const resumeAudio = context.resume();
       const master = context.createGain();
       master.gain.setValueAtTime(0, context.currentTime);
       master.gain.linearRampToValueAtTime(0.62, context.currentTime + 1.2);
@@ -167,8 +169,7 @@ export default function Home() {
         };
       };
 
-      audioContextRef.current = context;
-      await context.resume();
+      await resumeAudio;
       if (context.state !== "running") {
         throw new Error("Audio is blocked by the browser. Try enabling sound again.");
       }
@@ -294,23 +295,28 @@ export default function Home() {
       {audioError && <p className="audio-error" role="status">{audioError}</p>}
 
       <section className="hero" aria-labelledby="hero-title">
-        <p className="hero-kicker">
-          <span className="kicker-line" />
-          THE NEXT CHAPTER STARTS HERE
-          <span className="kicker-line" />
-        </p>
-
         <div className="brand-lockup">
-          <Image
-            src="/pragati-logo.png"
-            alt=""
-            width={56}
-            height={56}
-            priority
-            className="brand-mark"
-          />
+          <div className="brand-partners">
+            <Image
+              src="/pragati-logo.png"
+              alt=""
+              width={56}
+              height={56}
+              priority
+              className="brand-mark"
+            />
+            <div className="organizer">
+              <Image
+                src="/amrita-school-of-business.png"
+                alt="Amrita School of Business, Coimbatore"
+                width={1258}
+                height={249}
+                className="organizer-logo"
+              />
+            </div>
+          </div>
           <h1 id="hero-title">PRAGATI</h1>
-          <p className="brand-year">2027 <span>·</span> AMRITA SCHOOL OF BUSINESS</p>
+          <p className="brand-year">2027 <span>·</span> ANNUAL MANAGEMENT FESTIVAL</p>
         </div>
 
         <p className="hero-subtitle">

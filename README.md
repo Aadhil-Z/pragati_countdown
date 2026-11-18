@@ -1,8 +1,9 @@
 # Pragati 2027 Frontend
 
 A standalone, single-screen teaser frontend for Pragati 2027. It reuses only
-the Pragati logo from the 2025 frontend. The email form is visual-only for now:
-it validates addresses in the browser but does not save or send them.
+the Pragati logo from the 2025 frontend and displays the supplied Amrita School
+of Business logo with an organizer credit. The email form is visual-only for
+now: it validates addresses in the browser but does not save or send them.
 
 The optional instrumental loop is an original piano-like arpeggio with a soft
 chord progression and reverb, generated locally with the Web Audio API. It
